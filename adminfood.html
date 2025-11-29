@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>adminfood</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style/adminfood.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style/style.css') }}"
+    />
+  </head>
+  <body class="THE_body_of_the_padge">
+    <header class="site-header">
+      <div class="container">
+        <h1 class="logo">The Coffee House</h1>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/login">Login</a>
+     
+        </nav>
+      </div>
+    </header>
+    <form action="" class="all_input">
+      <label for="name" class="Nameproduct">Name of the product </label>
+      <input
+        type="text"
+        name="name"
+        id="name_product"
+        placeholder="enter the name product "
+      />
+
+      <label for="img" class="photolink">img_url</label>
+      <input
+        type="text"
+        name="img_url"
+        id="img"
+        placeholder="enter url_image"
+      />
+
+      <label for="price " class="priceproduct">price</label>
+      <input type="number" name="" id="price" placeholder="enter the price " />
+
+      <label for="deceraption" class="deceraption_product">description</label>
+      <input
+        type="text"
+        name="deceraption"
+        id="deceraption"
+        placeholder="..."
+      />
+
+      <input type="submit" id="click" value=" Add product " />
+    </form>
+
+    <footer class="site-footer">
+      <div class="container">&copy; {{ 2025 }} The Coffee House</div>
+    </footer>
+  </body>
+</html>

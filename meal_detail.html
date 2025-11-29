@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ meal.name }}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style/style.css') }}"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="logo">The Coffee House</h1>
+        <nav>
+          <a href="/">Home</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container" style="padding: 40px 0">
+      <div class="food-card" style="max-width: 400px; margin: auto">
+        <img
+          src="{{ url_for('static', filename=meal.image_url.replace('static/', '')) }}"
+          alt="{{ meal.name }}"
+        />
+        <div class="food-body">
+          <h2>{{ meal.name }}</h2>
+          <p class="price">
+            <strong>Price:</strong> ${{ '%.2f' % meal.price }}
+          </p>
+          <p class="desc">{{ meal.description }}</p>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container">&copy; {{ 2025 }} The Coffee House</div>
+      <form action=""></form>
+    </footer>
+  </body>
+</html>
